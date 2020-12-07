@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Header from "../components/header";
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,12 @@ class App extends Component {
   }
 
   render() {
-    return <button onClick={this.handleClick}>Click-me</button>;
+    return (
+      <React.Fragment>
+        <Header />
+        <button onClick={this.handleClick}>Click-me</button>
+      </React.Fragment>
+    );
   }
 }
 
