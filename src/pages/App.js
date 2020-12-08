@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "../components/header";
+import TodoList from "../components/todoList";
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
+        <TodoList items={this.state.todoItems} />
         <button onClick={this.handleClick}>Click-me</button>
       </React.Fragment>
     );
