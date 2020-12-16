@@ -1,10 +1,10 @@
-## - <b>Atenção</b> :
+## - <b>`Atenção`</b> :
 
-> - Esse projeto tem base de mostrar diversos niveis de conhecimento com react.
-> - A medida que o projeto evoluir novas coisas aparecerão.
-> - Nesse projeto foi usado git para versionar o projeto tendo a Branch de development e cada branch com desenvolvimento de uma feature, após todo esse processo houve merge com development.
-> - Cada desenvolvimento de uma feature, tem como objetivo mostrar pequenas partes, quando juntas formam uma funcionalidade e um aplicativo todo.
-> - Portanto, cada versão do código, cada branch pode mudar ao decorrer do projeto.
+- Esse projeto tem base de mostrar diversos niveis de conhecimento com react.
+- A medida que o projeto evoluir novas coisas aparecerão.
+- Nesse projeto foi usado git para versionar o projeto tendo a Branch de development e cada branch com desenvolvimento de uma feature, após todo esse processo houve merge com development.
+- Cada desenvolvimento de uma feature, tem como objetivo mostrar pequenas partes, quando juntas formam uma funcionalidade e um aplicativo todo.
+- Portanto, cada versão do código, cada branch pode mudar ao decorrer do projeto.
 
 - <b>`feature/removeDone`</b>: - Até aqui foi usado <b>class components</b>, <b>destructuring</b>, <b>this, props, state</b>, <b>css</b>, <b>array de objetos</b>.
 
