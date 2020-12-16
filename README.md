@@ -16,5 +16,5 @@
 
 ### - `Pretensões`:
 
-- Esse projeto vai começou apenas com um todo, porém pretendo fz um multitarefa, explorando potencial de muitas tecnologias, ferramentas.
-  > - Functional Components, hooks, redux, typescript teste unitario, teste de integração, node.
+- Esse projeto começou apenas com um to do, porém pretendo fazer um multi tarefa, explorando potencial de muitas tecnologias, ferramentas.
+  > - Functional Components, hooks, redux, typescript, teste unitario, teste de integração, node.
