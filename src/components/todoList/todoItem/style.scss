@@ -4,14 +4,15 @@ li {
   justify-content: space-between;
   background: #ededed;
   border-radius: 2px;
-  border-bottom: white 1px;
+  border-bottom: rgb(255, 255, 255) 1px;
   margin: 0.4px;
   height: 50px;
   align-items: center;
-  font-size: 23px; }
-
+  font-size: 23px;
+}
 li:hover {
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+}
 
 .done {
   color: rgba(255, 0, 0, 0.966);
@@ -21,7 +22,8 @@ li:hover {
   display: flex;
   justify-content: space-between;
   height: 40px;
-  align-items: center; }
+  align-items: center;
+}
 
 .undone {
   color: #61dafb;
@@ -29,22 +31,25 @@ li:hover {
   display: flex;
   justify-content: space-between;
   height: 40px;
-  align-items: center; }
-
+  align-items: center;
+}
 .icon {
-  margin: 6px 10px 6px 0; }
+  margin: 6px 10px 6px 0;
+}
 
 .done span {
   background: #ff0000;
   width: 25%;
-  height: 25px; }
-
+  height: 25px;
+}
 .undone span {
   background: #61dafb;
   width: 25%;
-  height: 25px; }
+  height: 25px;
+}
 
 ul li button {
   background: transparent;
   border: none;
-  font-size: 40px; }
+  font-size: 40px;
+}
