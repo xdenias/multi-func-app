@@ -3,6 +3,15 @@ import "./App.css";
 import Header from "../components/header";
 import TodoList from "../components/todoList";
 import TodoForm from "../components/todoForm";
+import { connect } from "react-redux";
+import { ADD_TITLE } from "../actions";
+
+const mapStateToProps = (state) => ({
+  title: state.title,
+});
+const mapDispatchToProps = (dispatch) => ({
+  testPart: () => dispatch({ type: ADD_TITLE }),
+});
 
 class App extends Component {
   constructor(props) {
@@ -55,9 +64,11 @@ class App extends Component {
           todoDone={this.todoDone}
         />
         <TodoForm addItem={this.addItem} />
+        <button onClick={(e) => this.props.testPart(e)}>teste</button>
+        <h1>{this.props.title || "Não tem nada"}</h1>
       </React.Fragment>
     );
   }
 }
-
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default App;
