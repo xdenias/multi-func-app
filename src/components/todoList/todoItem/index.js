@@ -1,33 +1,40 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { DONE_ITEM } from "../../../actions";
 import "./style.css";
 
+const mapDispatchToProps = (dispatch) => ({
+  doneItem: (payload) => dispatch({ type: DONE_ITEM, payload }),
+});
+const mapStateToProps = (state) => ({
+  title: state.title,
+  itemsReducer: state.itemsReducer,
+});
+
 class TodoItem extends Component {
-  constructor(props) {
-    super(props);
-    this.clickClose = this.clickClose.bind(this);
-    this.clickDone = this.clickDone.bind(this);
-  }
-  clickClose() {
-    let index = Number(this.props.index);
-    this.props.removeItem(index);
-  }
-  clickDone() {
-    let index = Number(this.props.index);
-    this.props.todoDone(index);
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.clickClose = this.clickClose.bind(this);
+  // }
+  // clickClose() {
+  //   let index = Number(this.props.index);
+  //   this.props.removeItem(index);
+  // }
 
   render() {
-    let todoClass = this.props.item.done ? "done" : "undone";
+    let todoClass = this.props.itemsReducer[this.props.index].done
+      ? "done"
+      : "undone";
     return (
       <li className="list-group-item ">
         <div className={todoClass}>
           <span
             className="glyphicon glyphicon-ok icon"
             aria-hidden="true"
-            onClick={this.clickDone}
+            onClick={() => this.props.doneItem(this.props.index)}
           ></span>
           {this.props.item.value}
-          <button type="button" className="close" onClick={this.clickClose}>
+          <button type="button" className="close">
             &times;
           </button>
         </div>
@@ -35,4 +42,4 @@ class TodoItem extends Component {
     );
   }
 }
-export default TodoItem;
+export default connect(mapStateToProps, mapDispatchToProps)(TodoItem);

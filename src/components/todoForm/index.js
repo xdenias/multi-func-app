@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import "./style.css";
-import { ADD_ITEM } from "../../actions";
+import { DONE_ITEM, ADD_ITEM } from "../../actions";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => ({
-  add: state.add,
+  itemsReducer: state.itemsReducer,
 });
 const mapDispatchToProps = (dispatch) => ({
-  testPart2: (payload) => dispatch({ type: ADD_ITEM, payload }),
+  addItem: (payload) => dispatch({ type: ADD_ITEM, payload }),
+  doneItem: (payload) => dispatch({ type: DONE_ITEM, payload }),
 });
 
 class TodoForm extends Component {
@@ -26,11 +27,10 @@ class TodoForm extends Component {
   handleClick(e) {
     console.log(this.state.newItemValue);
     this.props.addItem(this.state.newItemValue);
-    // this.props.addItem(this.state.newItemValue);
   }
   render() {
     return (
-      <React.Fragment>
+      <>
         <input
           type="text"
           className="form-control"
@@ -39,14 +39,15 @@ class TodoForm extends Component {
         />
         <button
           type="submit"
-          onClick={(e) => this.props.testPart2(this.state.newItemValue)}
+          onClick={() => this.props.addItem(this.state.newItemValue)}
           className="btn btn-default"
         >
           Add
         </button>
-        <button onClick={() => console.log(this.props.add)}></button>
-        {/* <h1>{this.props.add[3].index}</h1> */}
-      </React.Fragment>
+        <button onClick={() => console.log(this.props.itemsReducer)}>
+          asd
+        </button>
+      </>
     );
   }
 }

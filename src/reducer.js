@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
 import title from "./reducers/titleReducer";
-import add from "./reducers/addReducer";
-import todoItems from "./reducers/todoItemsReducer";
+import itemsReducer from "./reducers/itemsReducer";
 
 export default combineReducers({
   title,
-  add,
+  itemsReducer,
 });

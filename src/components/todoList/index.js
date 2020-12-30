@@ -4,21 +4,13 @@ import { connect } from "react-redux";
 import "./style.css";
 
 const mapStateToProps = (state) => ({
-  add: state.add,
+  itemsReducer: state.itemsReducer,
 });
 
 class TodoList extends Component {
   render() {
-    let items = this.props.add.map((item, index) => {
-      return (
-        <TodoItem
-          key={index}
-          item={item}
-          index={index}
-          removeItem={this.props.removeItem}
-          todoDone={this.props.todoDone}
-        />
-      );
+    let items = this.props.itemsReducer.map((item, index) => {
+      return <TodoItem key={index} item={item} index={index} />;
     });
     return <ul>{items}</ul>;
   }
