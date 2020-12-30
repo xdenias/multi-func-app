@@ -1,4 +1,4 @@
-import { ADD_ITEM, DONE_ITEM } from "../actions";
+import { REMOVE_ITEM, ADD_ITEM, DONE_ITEM } from "../actions";
 
 const initialState = [
   { index: 0, value: "Learn React", done: false },
@@ -22,6 +22,9 @@ const itemsReducer = (state = initialState, action) => {
           return item;
         }
       });
+    case REMOVE_ITEM:
+      return state.filter((item, index) => action.payload !== index);
+
     default:
       return state;
   }

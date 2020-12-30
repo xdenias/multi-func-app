@@ -16,18 +16,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.removeItem = this.removeItem.bind(this);
-  // }
-  // removeItem(itemIndex) {
-  //   this.setState((prevState) => ({
-  //     todoItems: prevState.todoItems.filter(
-  //       (item, index) => itemIndex !== index
-  //     ),
-  //   }));
-  // }
   render() {
     return (
       <React.Fragment>
