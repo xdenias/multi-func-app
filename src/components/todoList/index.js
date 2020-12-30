@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import TodoItem from "../todoList/todoItem";
+import { connect } from "react-redux";
 import "./style.css";
+
+const mapStateToProps = (state) => ({
+  add: state.add,
+});
 
 class TodoList extends Component {
   render() {
-    let items = this.props.items.map((item, index) => {
+    let items = this.props.add.map((item, index) => {
       return (
         <TodoItem
           key={index}
@@ -19,4 +24,4 @@ class TodoList extends Component {
   }
 }
 
-export default TodoList;
+export default connect(mapStateToProps)(TodoList);

@@ -1,5 +1,15 @@
 import React, { Component } from "react";
 import "./style.css";
+import { ADD_ITEM } from "../../actions";
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => ({
+  add: state.add,
+});
+const mapDispatchToProps = (dispatch) => ({
+  testPart2: (payload) => dispatch({ type: ADD_ITEM, payload }),
+});
+
 class TodoForm extends Component {
   constructor(props) {
     super(props);
@@ -29,14 +39,16 @@ class TodoForm extends Component {
         />
         <button
           type="submit"
-          onClick={this.handleClick}
+          onClick={(e) => this.props.testPart2(this.state.newItemValue)}
           className="btn btn-default"
         >
           Add
         </button>
+        <button onClick={() => console.log(this.props.add)}></button>
+        {/* <h1>{this.props.add[3].index}</h1> */}
       </React.Fragment>
     );
   }
 }
 
-export default TodoForm;
+export default connect(mapStateToProps, mapDispatchToProps)(TodoForm);
