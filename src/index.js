@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./index.css";
-import App from "./pages/App";
+import Routes from "./Routes";
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Routes />
   </Provider>,
 
   document.getElementById("root")

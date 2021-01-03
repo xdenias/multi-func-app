@@ -3,7 +3,13 @@ import "./style.css";
 
 class Header extends Component {
   render() {
-    return <h1>Todo - APP</h1>;
+    return (
+      <>
+        <a href="/">Home</a>
+        <a href="/test">Add Student</a>
+        <a href="/view-students">View Students</a>
+      </>
+    );
   }
 }
 
