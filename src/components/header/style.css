@@ -1,2 +1,19 @@
-h1 {
-  color: red; }
+header.header {
+  width: 100%;
+  height: 100px;
+  background: #5eb7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  header.header nav ul.u-list {
+    display: flex; }
+    header.header nav ul.u-list li {
+      width: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 2px; }
+      header.header nav ul.u-list li:hover {
+        background: #00aeff; }
+      header.header nav ul.u-list li a {
+        text-decoration: none; }

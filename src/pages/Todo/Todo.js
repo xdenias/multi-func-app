@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Teste.css";
+import "./Todo.css";
 import Header from "../../components/header";
 import TodoList from "../../components/todoList";
 import TodoForm from "../../components/todoForm";
@@ -11,18 +11,21 @@ const mapStateToProps = (state) => ({
   itemsReducer: state.itemsReducer,
 });
 const mapDispatchToProps = (dispatch) => ({
-  testPart: () => dispatch({ type: ADD_TITLE }),
+  // testPart: () => dispatch({ type: ADD_TITLE }),
   doneItem: (payload) => dispatch({ type: DONE_ITEM, payload }),
 });
 
-class Teste extends Component {
+class Todo extends Component {
   render() {
     return (
       <React.Fragment>
         <Header />
-        <h1>iaeee meen</h1>
+        <TodoList />
+        <TodoForm />
+        {/* <button onClick={() => this.props.testPart()}>teste</button>
+        <h1>{this.props.title || "Nothing"}</h1> */}
       </React.Fragment>
     );
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Teste);
+export default connect(mapStateToProps, mapDispatchToProps)(Todo);

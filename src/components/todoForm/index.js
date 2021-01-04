@@ -44,9 +44,9 @@ class TodoForm extends Component {
         >
           Add
         </button>
-        <button onClick={() => console.log(this.props.itemsReducer)}>
+        {/* <button onClick={() => console.log(this.props.itemsReducer)}>
           asd
-        </button>
+        </button> */}
       </>
     );
   }

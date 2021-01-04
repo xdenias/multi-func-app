@@ -12,7 +12,7 @@ class TodoList extends Component {
     let items = this.props.itemsReducer.map((item, index) => {
       return <TodoItem key={index} item={item} index={index} />;
     });
-    return <ul>{items}</ul>;
+    return <ul className="todo-list">{items}</ul>;
   }
 }
 

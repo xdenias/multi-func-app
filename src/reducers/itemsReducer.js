@@ -4,6 +4,7 @@ const initialState = [
   { index: 0, value: "Learn React", done: false },
   { index: 1, value: "Drink a coffe", done: true },
   { index: 2, value: "Eat lunch", done: true },
+  { index: 2, value: "...", done: false },
 ];
 
 const itemsReducer = (state = initialState, action) => {

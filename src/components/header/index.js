@@ -5,9 +5,18 @@ class Header extends Component {
   render() {
     return (
       <>
-        <a href="/">Home</a>
-        <a href="/test">Add Student</a>
-        <a href="/view-students">View Students</a>
+        <header className="header">
+          <nav>
+            <ul className="u-list">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/todo">Todo</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
       </>
     );
   }
