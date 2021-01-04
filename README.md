@@ -7,6 +7,7 @@
 - Portanto, cada versão do código, cada branch pode mudar ao decorrer do projeto.
 
 - <b>`feature/removeDone`</b>: - Até aqui foi usado <b>class components</b>, <b>destructuring</b>, <b>this, props, state</b>, <b>css</b>, <b>array de objetos</b>.
+- <b>`feature/routes`</b>: - Foi adicionado <b>redux</b>, <b>sass</b>, <b>react-router</b> .
 
 ### - `Funcionalidades` :
 
@@ -17,4 +18,4 @@
 ### - `Pretensões`:
 
 - Esse projeto começou apenas com um to do, porém pretendo fazer um multi tarefa, explorando potencial de muitas tecnologias, ferramentas.
-  > - Functional Components, hooks, redux, typescript, teste unitario, teste de integração, node.
+  > - Functional Components, hooks, redux, redux-thunk, redux-saga, styled components, material-ui, typescript, teste unitario, teste de integração, node.
