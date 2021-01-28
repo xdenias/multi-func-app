@@ -8,6 +8,7 @@
 
 - <b>`feature/removeDone`</b>: - Até aqui foi usado <b>class components</b>, <b>destructuring</b>, <b>this, props, state</b>, <b>css</b>, <b>array de objetos</b>.
 - <b>`feature/routes`</b>: - Foi adicionado <b>redux</b>, <b>sass</b>, <b>react-router</b> .
+- <b>`feature/typescript`</b>: - Adicionando <b>typescript</b> e <b>functional components</b>.
 
 ### - `Funcionalidades` :
 
